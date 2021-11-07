@@ -29,7 +29,7 @@ function onSubmitButtonClick (e) {
 
 function updateFormMessage () {
     if (localStorage.getItem("feedback-form-state") === null) {
-        return
+        return;
     }
     try {
         formEl.email.value = JSON.parse(localStorage.getItem("feedback-form-state")).email;
