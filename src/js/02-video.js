@@ -10,9 +10,12 @@ function saveVideoCurrentTime (e) {
     localStorage.setItem("videoplayer-current-time", JSON.stringify(e.seconds));
 };
 
-try {
-    player.setCurrentTime(localStorage.getItem("videoplayer-current-time"));
-} catch (err) {
-    console.log("error");
-  };
+if (localStorage.getItem("videoplayer-current-time") === null) {
+    return;
+}
+    try {
+        player.setCurrentTime(localStorage.getItem("videoplayer-current-time"));
+    } catch (err) {
+        console.log("error");
+    };
 
