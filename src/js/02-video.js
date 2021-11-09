@@ -18,3 +18,5 @@ if (localStorage.getItem("videoplayer-current-time") === null) {
     } catch (err) {
         console.log("error");
     };
+
+    
